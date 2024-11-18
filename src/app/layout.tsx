@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { Sen } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/header";
+import SidebarNew from "@/components/sb";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -47,9 +49,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       {/* <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body> */}
-      <body className={`${font.className}  antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <body className={`${font.className}  antialiased relative`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <Header />
           {children}
+          {/* <SidebarNew /> */}
         </ThemeProvider>
       </body>
     </html>
