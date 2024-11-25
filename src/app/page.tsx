@@ -1,10 +1,12 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="w-full h-dvh flex justify-center items-center">
-      <div>
+      <div className="flex flex-col justify-center items-center">
         <motion.h1
           initial={{
             opacity: 0,
@@ -42,6 +44,26 @@ export default function Home() {
         >
           Transform your ideas into stunning images with StableMax.
         </motion.p>
+        <motion.div
+          initial={{
+            opacity: 0,
+            scale: 0.95,
+            filter: "blur(10px)",
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 1,
+          }}
+        >
+          <Link href="/generate" className="mt-4">
+            <Button className="mt-4 text-center">Get Started</Button>
+          </Link>
+        </motion.div>
       </div>
     </div>
   );

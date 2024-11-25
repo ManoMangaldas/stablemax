@@ -6,7 +6,7 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <div className="fixed top-0 w-full h-[60px] bg-black border-b-2 border-white/60 p-3 flex">
+    <div className="fixed top-0 w-full h-[60px]  border-b-2 border-[hsl(var(--foreground))]/40 p-3 flex">
       <div className="text-bold text-2xl">
         <Link href="/">StableMax</Link>
       </div>
