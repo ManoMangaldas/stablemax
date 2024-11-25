@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+/unwanted_folder
 
 # debug
 npm-debug.log*
